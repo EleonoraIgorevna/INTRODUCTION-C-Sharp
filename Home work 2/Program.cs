@@ -107,7 +107,7 @@ namespace Home_work_2
             Console.WriteLine("|                      " + DateTime.Now + "|");
             Console.WriteLine("|                                        |");
             Console.WriteLine("|                                        |");
-            Console.WriteLine("|                                        |");
+            Co45nsole.WriteLine("|                                        |");
             Console.WriteLine("|                                        |");
             Console.WriteLine("|                                        |");
             Console.WriteLine("|                                        |");
@@ -124,16 +124,23 @@ namespace Home_work_2
 
             Console.WriteLine("Введите  номер месяца от 1 до 12.");
             int mounth1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите среднюю температуру.");
+            int temp = int.Parse(Console.ReadLine());
 
 
-           
-                switch (mounth1)
+            switch (mounth1)
                 {
                     case 12:
                     case 1:
                     case 2:
+                     if (temp > 0)
+                        {
+                        Console.WriteLine("Дождливая зима.");
+                        return;
+                    }
+                    else
                         Console.WriteLine("Это зимний месяц.");
-                        break;
+                    break;
                     case 3:
                     case 4:
 
